@@ -1,7 +1,6 @@
 # seciotcrgb
 
-## Overlays
-seciotcrgb: Enables the use of ADS7846 touchscreen with spidev1.0. This combination is currently unsupported by existing overlays.
+Enables the use of ADS7846 touchscreen with spidev1.0. This combination is currently unsupported by existing overlays.
 
 ## Installing
 ```
