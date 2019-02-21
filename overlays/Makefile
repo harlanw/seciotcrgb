@@ -1,5 +1,11 @@
-install: epic-poop.dtbo
-	sudo cp epic-poop.dtbo /boot/overlays/.
+DTS = seciotcrgb.dts
+DTBO = $(DTS:.dts=.dtbo)
 
-epic-poop.dtbo: epic-poop.dts
-	dtc epic-poop.dts > epic-poop.dtbo
+INSTALL_PATH = /boot/overlays/
+
+$(DTBO): $(DTS)
+	dtc  $< > $@
+
+install: $(DTBO)
+	@echo "Copying $(DTBO) to $(INSTALL_PATH)"
+	sudo cp $(DTBO) $(INSTALL_PATH)
