@@ -1,12 +1,18 @@
 # seciotcrgb
 
-Enables the use of ADS7846 touchscreen with spidev1.0. This combination is currently unsupported by existing overlays.
+The combination of the ADS7846 touchscreen alongside spidev1.0 (SPI1) was
+required for this project. This combination was unsupported by existing
+overlays so I made a new one to support it and uploaded it here.
 
 ## Installing
+From the Raspberry Pi:
 ```
 git clone https://github.com/harlanw/seciotcrgb
 make install
 ```
+
+Do not forget to update your `config.txt` file. An example config has been
+included for reference.
 
 ## Board Render
 
